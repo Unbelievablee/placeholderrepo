@@ -26,7 +26,7 @@ pipeline {
         stage("build image") {
             steps {
                 script {
-                    buildImage()
+                    buildImage '127.0.0.1:8083/java-maven-app:2.3'
                 }
             }
         }
