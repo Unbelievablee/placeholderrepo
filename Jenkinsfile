@@ -26,7 +26,9 @@ pipeline {
         stage("build image") {
             steps {
                 script {
-                    buildImage '127.0.0.1:8083/java-maven-app:2.3'
+                    buildImage '127.0.0.1:8083/java-maven-app:2.4'
+                    dockerLogin()
+                    dockerPush '127.0.0.1:8083/java-maven-app:2.4'
                 }
             }
         }
